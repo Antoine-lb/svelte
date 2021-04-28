@@ -3,7 +3,7 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ page, fetch, session, context }) {
-		const url = `http://localhost:1337/rests?rest_id=${page.params.rest}`;
+		const url = `https://bc-backend-prod.herokuapp.com/rests?rest_id=${page.params.rest}`;
 		const res = await fetch(url);
 
 		console.log('page.params.rest', page.params.rest);
